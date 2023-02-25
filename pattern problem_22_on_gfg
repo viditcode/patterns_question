@@ -1,0 +1,38 @@
+include <bits/stdc++.h>
+
+using namespace std;
+
+// } Driver Code Ends
+class Solution {
+  public:
+    void printSquare(int n) {
+        // code here
+        int temp=2*n-1;
+        for (int i=0; i<temp;i++ ){
+            for(int j=0;j<temp;j++){
+                int top=i;
+                int left =j;
+                int bottom=temp-1-i;
+                int right = temp -1-j;
+                cout <<(n-min (min(top, bottom),min (left,right)));
+                cout <<" ";
+            }
+            cout <<endl;
+        }
+        }
+};
+
+//{ Driver Code Starts.
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+
+        Solution ob;
+        ob.printSquare(n);
+    }
+    return 0;
+}
